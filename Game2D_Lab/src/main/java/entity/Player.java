@@ -6,7 +6,10 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+<<<<<<< HEAD
 import java.io.File;
+=======
+>>>>>>> 75ca46129e0d8549c858e0a890944f5f8c4575ed
 import java.util.HashSet;
 import java.util.Set;
 import javax.imageio.ImageIO;
@@ -14,15 +17,22 @@ import javax.imageio.ImageIO;
 public class Player extends Entity{
     GamePanel gp;
     KeyHandler keyH;
+<<<<<<< HEAD
     BufferedImage image = null;
     
+=======
+>>>>>>> 75ca46129e0d8549c858e0a890944f5f8c4575ed
     
     public Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
         this.keyH = keyH;
         
         setDefaultValues();
+<<<<<<< HEAD
         getPlayerImage();
+=======
+//        getPlayerImage();
+>>>>>>> 75ca46129e0d8549c858e0a890944f5f8c4575ed
         
     }
     public void setDefaultValues(){
@@ -33,7 +43,10 @@ public class Player extends Entity{
     }
     public void getPlayerImage(){
         try{
+<<<<<<< HEAD
             System.out.println("Image loading started");
+=======
+>>>>>>> 75ca46129e0d8549c858e0a890944f5f8c4575ed
             up1 = ImageIO.read(getClass().getResourceAsStream("player/boy_up_1.png"));
             up2 = ImageIO.read(getClass().getResourceAsStream("player/boy_up_2.png"));
             down1 = ImageIO.read(getClass().getResourceAsStream("player/boy_down_1.png"));
@@ -42,7 +55,11 @@ public class Player extends Entity{
             left2 = ImageIO.read(getClass().getResourceAsStream("player/boy_left_2.png"));
             right1 = ImageIO.read(getClass().getResourceAsStream("player/boy_right_1.png"));
             right2 = ImageIO.read(getClass().getResourceAsStream("player/boy_right_2.png"));
+<<<<<<< HEAD
             System.out.println("Image loading ended");
+=======
+            
+>>>>>>> 75ca46129e0d8549c858e0a890944f5f8c4575ed
         }catch(IOException e){
             e.printStackTrace();
         }
