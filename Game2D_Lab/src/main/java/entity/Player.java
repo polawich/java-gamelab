@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 import javax.imageio.ImageIO;
@@ -13,13 +14,15 @@ import javax.imageio.ImageIO;
 public class Player extends Entity{
     GamePanel gp;
     KeyHandler keyH;
+    BufferedImage image = null;
+    
     
     public Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
         this.keyH = keyH;
         
         setDefaultValues();
-//        getPlayerImage();
+        getPlayerImage();
         
     }
     public void setDefaultValues(){
@@ -30,6 +33,7 @@ public class Player extends Entity{
     }
     public void getPlayerImage(){
         try{
+            System.out.println("Image loading started");
             up1 = ImageIO.read(getClass().getResourceAsStream("player/boy_up_1.png"));
             up2 = ImageIO.read(getClass().getResourceAsStream("player/boy_up_2.png"));
             down1 = ImageIO.read(getClass().getResourceAsStream("player/boy_down_1.png"));
@@ -38,7 +42,7 @@ public class Player extends Entity{
             left2 = ImageIO.read(getClass().getResourceAsStream("player/boy_left_2.png"));
             right1 = ImageIO.read(getClass().getResourceAsStream("player/boy_right_1.png"));
             right2 = ImageIO.read(getClass().getResourceAsStream("player/boy_right_2.png"));
-            
+            System.out.println("Image loading ended");
         }catch(IOException e){
             e.printStackTrace();
         }
